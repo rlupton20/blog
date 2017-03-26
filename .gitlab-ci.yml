@@ -1,4 +1,4 @@
-image: haskell:latest
+image: fpco/stack-build:lts-8.5
 
 pages:
   cache:
@@ -7,12 +7,17 @@ pages:
       - .stack
   before_script:
     - export STACK_ROOT=`pwd`/.stack
-    - stack install --only-dependencies
-    - stack build
+    - stack setup --no-docker
+    - stack install --no-docker --only-dependencies
+    - stack build --no-docker
   script:
-    - stack exec site build
+    - mkdir -p .public
+    - stack exec site build --no-docker
+    - mv _site/* .public/
+    - mv .public public
   artifacts:
     paths:
       - public
   only:
     - master
+
