@@ -1,0 +1,13 @@
+---
+title: Test
+---
+
+This is a test post
+
+Here is some code
+
+```
+f :: Int -> Int
+f 0 = 1
+f n = n * (n - 1)
+```
