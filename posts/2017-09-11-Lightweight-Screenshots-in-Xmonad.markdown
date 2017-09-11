@@ -4,7 +4,7 @@ title: Lightweight screenshots in Xmonad
 
 ## Introduction
 
-Xmonad does not come with any kind of screenshot tool (or anything at all much, which in my view is a good thing - what it does do it does well). I didn't want a heavyweight system (something taken from GNOME or XFCE), but wanted some flexibility still. I made a little script which straps together``rofi`, `slop`, `maim` and `xclip` to provide a lightweight and flexible screenshotting tool. I'm posting it here for anyone who is looking for something similar. Add a keybinding in `xmonad` and off you go! Of course, this will work perfectly well with other window managers too. 
+Xmonad does not come with any kind of screenshot tool (or anything at all much, which in my view is a good thing - what it does do it does well). I didn't want a heavyweight system (something taken from GNOME or XFCE), but wanted some flexibility still. I made a little script which straps together `rofi`, `slop`, `maim` and `xclip` to provide a lightweight and flexible screenshotting tool. I'm posting it here for anyone who is looking for something similar. Add a keybinding in `xmonad` and off you go! Of course, this will work perfectly well with other window managers too. 
 
 I wanted to be able to do a combination of the following things
  1. Capture the whole screen
