@@ -51,7 +51,7 @@ Run `nixos-rebuild switch` to instantiate your new configuration. You can try ou
 
 # Blacklisting unwanted licenses
 
-`nixpkgs` can be configured to blacklist certain license types. The [https://github.com/NixOS/nixpkgs/blob/master/lib/licenses.nix](license definition file) lists all the licenses used in all the packages in nix. Anything with `free = false;` is recognized as a non-free package by nix, and can't be installed unless non-free packages are explicitly enabled. However, there are non-free licenses without this label. `unfreeRedistributableFirmware` is non-free yet doesn't have this label. To help avoid inadvertantly installing these kinds of packages, we need to blacklist this license (along with any others we want to avoid).
+`nixpkgs` can be configured to blacklist certain license types. The [license definition file](https://github.com/NixOS/nixpkgs/blob/master/lib/licenses.nix) lists all the licenses used in all the packages in nix. Anything with `free = false;` is recognized as a non-free package by nix, and can't be installed unless non-free packages are explicitly enabled. However, there are non-free licenses without this label. `unfreeRedistributableFirmware` is non-free yet doesn't have this label. To help avoid inadvertantly installing these kinds of packages, we need to blacklist this license (along with any others we want to avoid).
 
 ## System level
 
@@ -92,7 +92,7 @@ It's also possible to specify a license whitelist, with the option `whitelistedL
 }
 ```
 
-to `~/.config/nixpkgs/config.nix`. The [https://nixos.org/nixpkgs/manual/#chap-packageconfig](nixpkgs manual) contains information here that's useful.
+to `~/.config/nixpkgs/config.nix`. The [nixpkgs manual](https://nixos.org/nixpkgs/manual/#chap-packageconfig) contains information here that's useful.
 
 If you use a manifest to install packages, you can add these configuration options to your import of `nixpkgs`. For example:
 
