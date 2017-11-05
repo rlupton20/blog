@@ -54,6 +54,22 @@ div.info {
     font-style: italic;
 }
 
+a:link {
+    color: #268bd2;
+}
+
+a:visited {
+    color: #b58900;
+}
+
+a:hover {
+    color: #859900;
+}
+
+a:active {
+    color: #d33682;
+}
+
 /* Syntax highlighting CSS */
 div.sourceCode, pre:not(.sourceCode) { background: #FDF6E3; }
 pre code { color: #657B83; }
