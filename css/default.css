@@ -4,6 +4,8 @@ body {
     font-size: 20px;
     margin: 0px auto 0px auto;
     width: 800px;
+    text-align: justify;
+    text-justify: inter-word;
 }
 
 div#header {
