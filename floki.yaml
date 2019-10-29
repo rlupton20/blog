@@ -1,0 +1,6 @@
+image:
+  build:
+    name: blog
+docker_switches:
+  - -p
+  - 1313:1313
