@@ -10,7 +10,17 @@ install:
 
 script:
   - pushd blog
+  - sed -i 's#^baseURL.*$#baseURL = "https://rlupton20.github.io/"#' config.toml
   - hugo --gc --minify
   - popd
   - mv blog/public public
 
+deploy:
+  provider: pages
+  repo: rlupton20/rlupton20.github.io
+  target_branch: master
+  skip_cleanup: true
+  github_token: $GITHUB_TOKEN
+  keep_history: true
+  on:
+    branch: master
