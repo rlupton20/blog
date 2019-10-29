@@ -1,5 +1,6 @@
 ---
 title: Booting DragonFly BSD with HAMMER on a GPT drive
+date: 2015-10-23T16:00:00Z
 ---
 
 Here I’ll outline how I managed to get DragonFly BSD to boot from a single slice (Linux: partition) by chainloading the DragonFly bootloader boot1.

@@ -1,5 +1,6 @@
 ---
 title: Libre-rate your NixOS
+date: 2017-09-25T16:00:00Z
 ---
 
 NixOS isn't a libre distribution by any means, but it comes close, and maintains a clear distinction between free and non-free packages (and in fact, different license types). This makes it possible to configure the system to exclude non-free packages, and with the addition of a libre kernel, allows us to turn NixOS into a libre platform. Of course, this isn't the same as leveraging an FSF endorsed distribution, but for those who are happy to maintain and take responsibility for the software running on their systems, it's as good. In fact, it's a little strange that the process of deblobbing normal systems isn't better documented and more widely done, after all, this is exactly what a libre distribution typically is. If you want a libre system out of the box, with nix-y functionality, GuixSD is also worth a look, but I really like NixOS, and I thought it worth the effort to libre-up.

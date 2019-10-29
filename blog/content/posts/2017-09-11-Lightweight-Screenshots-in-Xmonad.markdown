@@ -1,5 +1,6 @@
 ---
 title: Lightweight screenshots in Xmonad
+date: 2017-09-11T16:00:00Z
 ---
 
 ## Introduction

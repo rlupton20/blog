@@ -1,0 +1,3 @@
+[submodule "blog/themes/purehugo"]
+	path = blog/themes/purehugo
+	url = https://github.com/dplesca/purehugo.git

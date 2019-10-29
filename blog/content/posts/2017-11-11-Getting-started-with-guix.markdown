@@ -1,5 +1,6 @@
 ---
 title: Getting started with GuixSD
+draft: true
 ---
 
 In progress: A collection of tips for getting started with and using GuixSD.
