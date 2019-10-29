@@ -1,4 +1,8 @@
 baseURL = "http://example.org/"
 languageCode = "en-us"
-title = "the hacky sack"
+title = "The hacky sack"
 theme = "purehugo"
+
+[params]
+  githubName = "rlupton20"
+  google_analytics = "UA-109154579-1"
