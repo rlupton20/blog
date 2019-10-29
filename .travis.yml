@@ -17,6 +17,7 @@ script:
 
 deploy:
   provider: pages
+  local_dir: public
   repo: rlupton20/rlupton20.github.io
   target_branch: master
   skip_cleanup: true
