@@ -1,6 +1,6 @@
-baseURL = "http://example.org/"
+baseURL = "https://www.pure-hack.com/"
 languageCode = "en-us"
-title = "The hacky sack"
+title = "Pure Hack"
 theme = "purehugo"
 
 [params]
