@@ -1,3 +1,4 @@
 [submodule "blog/themes/purehugo"]
 	path = blog/themes/purehugo
-	url = https://github.com/dplesca/purehugo.git
+	url = https://github.com/rlupton20/purehugo.git
+	branch = "blog-custom"
