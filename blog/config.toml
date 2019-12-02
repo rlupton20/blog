@@ -5,4 +5,4 @@ theme = "purehugo"
 
 [params]
   githubName = "rlupton20"
-  #google_analytics = "UA-109154579-1"
+  google_analytics = "UA-109154579-1"
