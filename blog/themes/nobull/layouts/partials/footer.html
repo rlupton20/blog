@@ -1,0 +1,7 @@
+<div id="footer">
+  {{ with .Site.Params.githubName }}
+  <a href="https://github.com/{{ . }}">
+    <img class="nav-icon" src='{{ "icons/github.svg#github" | absURL }}'>
+  </a>
+  {{ end }}
+</div>

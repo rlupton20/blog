@@ -1,0 +1,14 @@
+{{ define "main" }}
+
+<div class="posts">
+  <h2>Posts</h2>
+  <ul class="link-list" style="list-style-type:none;">
+  {{ range .Paginator.Pages }}
+  <li>
+    <a href="{{ .Permalink }}">{{ .Title }}</a>
+  </li>
+  {{ end }}
+  <ul>
+</div>
+
+{{ end }}

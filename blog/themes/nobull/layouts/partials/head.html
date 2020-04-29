@@ -1,0 +1,8 @@
+<head>
+<title>{{ .Site.Title }} - {{ .Title }}</title>
+<link rel="stylesheet" href='{{ "css/style.css" | absURL }}'>
+
+{{ if not (in (string .Site.BaseURL) "localhost") }}
+  {{ template "_internal/google_analytics_async.html" . }}
+{{ end }}
+</head>
