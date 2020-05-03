@@ -1,6 +1,7 @@
 <head>
 <title>{{ .Site.Title }} - {{ .Title }}</title>
 <link rel="stylesheet" href='{{ "css/style.css" | absURL }}'>
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
 {{ if not (in (string .Site.BaseURL) "localhost") }}
   {{ template "_internal/google_analytics_async.html" . }}

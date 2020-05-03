@@ -1,7 +1,11 @@
 #content {
     max-width: 800px;
     margin: 0 auto;
+    padding: 10px;
     font-size: 18px;
+
+    line-height: 1.5;
+    text-align: justify;
 }
 
 #header {
@@ -9,7 +13,9 @@
     font-size: 28px;
     font-weight: bold;
     text-align: center;
-    margin-bottom: 80px;
+    margin-top: 80px;
+    margin-bottom: 100px;
+    letter-spacing: 20px;
 }
 
 #footer {
@@ -18,9 +24,8 @@
     margin-top: 80px;
 }
 
-p {
-    line-height: 1.5;
-    text-align: justify;
+li {
+    margin-bottom: 20px;
 }
 
 h1.title {
