@@ -24,6 +24,10 @@
     margin-top: 80px;
 }
 
+div.footnotes {
+    font-size: 14px;
+}
+
 li {
     margin-bottom: 20px;
 }
