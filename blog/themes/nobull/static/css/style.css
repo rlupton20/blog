@@ -54,11 +54,20 @@ h3,h4,h5,h6 {
 
 a:link, a:visited {
     text-decoration: none;
-    color: #313131;
+    color: #478A9E;
 }
 
 a:hover {
+    color: #2FACAD;
+}
+
+a:link.site-title, a:visited.site-title {
+    text-decoration: none;
     color: #57697b;
+}
+
+a:hover.site-title {
+    color: #2FACAD;
 }
 
 img.nav-icon {
