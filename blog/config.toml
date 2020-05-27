@@ -2,8 +2,7 @@ baseURL = "https://www.pure-hack.com/"
 languageCode = "en-us"
 title = "Pure Hack"
 theme = "nobull"
+googleAnalytics = "UA-109154579-1"
 
 [params]
   githubName = "rlupton20"
-  hideShareOptions = true
-  googleAnalytics = "UA-109154579-1"
