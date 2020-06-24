@@ -22,8 +22,8 @@ In other words, thread ownership must dominate object ownership.
 
 Enforcing sequential access to data really limits the amount of concurrency we can achieve, and often can leave threads spinning or blocked, and not making progress.
 It's not just that only one thread can operate on the data at any one time.
-If a piece of data is read and written from two cores (for arguments sake, on the same socket, since non-uniform memory access only exacerbates these issues), then each write must be pushed out to L3 cache (L2 on older architectures) for the other core to see it.
-This reduces the number of concurrent data accesses we can make in a fixed time period when 2 cores are trying to make progress, because the cost of a write increases about 10x. The key thing here is that this blocks other work from being done (in practice this is usually an `mfence` instruction).
+If a piece of data is read and written from two cores (for arguments sake, on the same socket, since non-uniform memory access only exacerbates these issues), then each write must be synchronized across caches for the other core to see it.
+This reduces the number of concurrent data accesses we can make in a fixed time period when 2 cores are trying to make progress. The key thing here is that this blocks other work from being done (in practice this is usually an `mfence` instruction).
 
 Suppose we wanted to avoid that cost.
 Object method execution would then have to be pinned to a single core.
@@ -31,7 +31,7 @@ But then how do objects communicate across cores?
 We can't just call methods because then we start executing a foreign core's object methods on the wrong core.
 The natural thing to do is to introduce queues, and have objects read messages and dispatch data to each other asynchronously on these queues. If our queues are single-producer-single-consumer then we don't need full sequential consistency, and can manage with release semantics on writes and acquire semantics on read, which is already guaranteed on regular writes and reads in the x86_64 instruction set anyway (these semantics place guarantees on the order on which memory changes are observed, but not when).
 
-Note that the data must go via L3 cache still, but that happens asynchronously, and the core won't be waiting for the synchronization to happen (that is, for a memory fence instruction to do its work) and can progress with something else
+Note that the data must still be synchronized eventually, but that happens asynchronously, and the core won't be waiting for the synchronization to happen (that is, for a memory fence instruction to do its work) and can progress with something else
 
 At that point method calls are redundant, and our objects are actually just loops acting on data arriving in queues[^2].
 What we really have is a small actor model.
