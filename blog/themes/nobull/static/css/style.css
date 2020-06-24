@@ -24,6 +24,10 @@
     margin-top: 80px;
 }
 
+#date {
+    font-style: italic;
+}
+
 div.footnotes {
     font-size: 14px;
 }
